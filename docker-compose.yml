@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  dev-db:
+    image: postgres:13
+  web:
+    build: .
+    ports:
+      - "8000:5000"
+  redis:
+    image: "redis:alpine"
